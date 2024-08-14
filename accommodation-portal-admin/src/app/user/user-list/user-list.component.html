@@ -1,0 +1,29 @@
+<h3 class="header">User List</h3>
+<hr>
+<table class="table  table-hover shadow p-3 mb-5 bg-white rounded container">
+  <thead class="bg-dark">
+    <tr>
+        <th class="text-light">#</th>
+        <th class="text-light">First Name</th>
+        <th class="text-light">Last Name</th>
+        <th class="text-light"style="width:25%;">Email</th>
+        <th class="text-light" style="width:17%">User Type</th>
+        <th class="text-light" style="width:150px">Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let user of users; let i = index">
+      <td>{{i + 1}}</td>
+      <td>{{user.firstName}}</td>
+      <td>{{user.lastName}}</td>
+      <td>{{user.email}}</td>
+      <td>{{user.user_type}}</td>
+      <td>
+        <button class="btn btn-sm text-light" style="margin-left: 10px; background-color:#FF5252; border-radius: 20px;">Delete</button>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<div class="d-flex justify-content-between p-2">
+    <ngb-pagination [collectionSize]="70" [(page)]="page" aria-label="Default pagination"></ngb-pagination>
+</div>

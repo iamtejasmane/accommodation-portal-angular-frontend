@@ -1,0 +1,21 @@
+<h3 class="header">Room Types</h3>
+<hr>
+<table class="table table-striped table-hover shadow p-3 mb-5 bg-white rounded container" style="width:500px">
+  <thead class="bg-dark">
+    <tr>
+      <th class="text-light">#</th>
+      <th class="text-light">Type</th>
+      <th class="text-light" style="width:150px">Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let type of rTypes; let i = index">
+      <td>{{i + 1}}</td>
+      <td>{{type.name}}</td>
+      <td>
+        <button class="btn btn-sm text-light" style="background-color: #FF8A65;">Edit</button>
+        <button class="btn btn-sm text-light" style="margin-left: 10px; background-color:#FF5252">Delete</button>
+      </td>
+    </tr>
+  </tbody>
+</table>

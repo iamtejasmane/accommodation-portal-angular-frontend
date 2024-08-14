@@ -1,0 +1,20 @@
+<h3 class="header">States</h3>
+<hr>
+<table class="table table-striped table-hover shadow p-3 mb-5 bg-white rounded container" style="width:500px">
+  <thead class="bg-dark">
+    <tr>
+      <th class="text-light">#</th>
+      <th class="text-light">States</th>
+      <th class="text-light" style="width:150px">Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let state of states; let i = index">
+      <td>{{i + 1}}</td>
+      <td>{{state.name}}</td>
+      <td>
+        <button class="btn btn-sm text-light" style="margin-left: 10px; background-color:#FF5252">Delete</button>
+      </td>
+    </tr>
+  </tbody>
+</table>
